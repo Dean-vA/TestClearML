@@ -38,12 +38,12 @@ env = DummyVecEnv([make_env]) # Only one environment
 model = PPO(config["policy_type"], env, verbose=1)#, tensorboard_log=f"runs/{run.id}")
 model.learn(
     total_timesteps=config["total_timesteps"],
-    callback=WandbCallback(
-        gradient_save_freq=100,
+    #callback=WandbCallback(
+        #gradient_save_freq=100,
         #model_save_path=f"models/{run.id}",
-        model_save_path="models/test",
-        verbose=2,
-    ),
+        #model_save_path="models/test",
+        #verbose=2,
+    #),
 )
 #run.finish()
 model.save("ppo_cartpole")
