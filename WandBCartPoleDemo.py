@@ -18,13 +18,13 @@ config = {
     "total_timesteps": 250000,
     "env_name": "CartPole-v1",
 }
-run = wandb.init(
-    project="sb3CartPole",
-    config=config,
-    sync_tensorboard=True,  # auto-upload sb3's tensorboard metrics
-    monitor_gym=True,  # auto-upload the videos of agents playing the game
-    save_code=True,  # optional
-)
+#run = wandb.init(
+#    project="sb3CartPole",
+#    config=config,
+#    sync_tensorboard=True,  # auto-upload sb3's tensorboard metrics
+#    monitor_gym=True,  # auto-upload the videos of agents playing the game
+#    save_code=True,  # optional
+#)
 
 def make_env():
     env = gym.make(config["env_name"])
@@ -35,7 +35,7 @@ env = DummyVecEnv([make_env]) # Only one environment
 #env = VecVideoRecorder(env, f"videos/{run.id}", record_video_trigger=lambda x: x % 2000 == 0, video_length=200)
 #%%
 
-model = PPO(config["policy_type"], env, verbose=1, tensorboard_log=f"runs/{run.id}")
+model = PPO(config["policy_type"], env, verbose=1)#, tensorboard_log=f"runs/{run.id}")
 model.learn(
     total_timesteps=config["total_timesteps"],
     callback=WandbCallback(
@@ -44,5 +44,5 @@ model.learn(
         verbose=2,
     ),
 )
-run.finish()
+#run.finish()
 model.save("ppo_cartpole")
