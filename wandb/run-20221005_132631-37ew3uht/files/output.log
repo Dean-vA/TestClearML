@@ -1,0 +1,47 @@
+Using cuda device
+Logging to runs/37ew3uht\PPO_1
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 21.7     |
+|    ep_rew_mean     | 21.7     |
+| time/              |          |
+|    fps             | 426      |
+|    iterations      | 1        |
+|    time_elapsed    | 4        |
+|    total_timesteps | 2048     |
+---------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 27.3        |
+|    ep_rew_mean          | 27.3        |
+| time/                   |             |
+|    fps                  | 485         |
+|    iterations           | 2           |
+|    time_elapsed         | 8           |
+|    total_timesteps      | 4096        |
+| train/                  |             |
+|    approx_kl            | 0.008625796 |
+|    clip_fraction        | 0.101       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.686      |
+|    explained_variance   | -0.00374    |
+|    learning_rate        | 0.0003      |
+|    loss                 | 6.88        |
+|    n_updates            | 10          |
+|    policy_gradient_loss | -0.0156     |
+|    value_loss           | 51.8        |
+-----------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\aswegen.d\Dropbox\0_Buas\BuasDev\TestClearML\WandBCartPoleDemo.py", line 35, in <module>
+    model.learn(
+  File "C:\Users\aswegen.d\Anaconda3\envs\pytorch\lib\site-packages\stable_baselines3\ppo\ppo.py", line 314, in learn
+    return super().learn(
+  File "C:\Users\aswegen.d\Anaconda3\envs\pytorch\lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 272, in learn
+    self.train()
+  File "C:\Users\aswegen.d\Anaconda3\envs\pytorch\lib\site-packages\stable_baselines3\ppo\ppo.py", line 274, in train
+    loss.backward()
+  File "C:\Users\aswegen.d\Anaconda3\envs\pytorch\lib\site-packages\torch\_tensor.py", line 396, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "C:\Users\aswegen.d\Anaconda3\envs\pytorch\lib\site-packages\torch\autograd\__init__.py", line 173, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

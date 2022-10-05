@@ -1,0 +1,24 @@
+{
+    "os": "Windows-10-10.0.22000-SP0",
+    "python": "3.9.12",
+    "heartbeatAt": "2022-10-05T11:26:31.624267",
+    "startedAt": "2022-10-05T11:26:31.069835",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+    "gpu_count": 1,
+    "cpu_count": 20,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\aswegen.d\\Dropbox\\0_Buas\\BuasDev\\TestClearML\\WandBCartPoleDemo.py",
+    "codePath": "WandBCartPoleDemo.py",
+    "git": {
+        "remote": "https://github.com/Deanis/TestClearML.git",
+        "commit": "3366eb6f42a82a12246e13f33177825099b1bfb8"
+    },
+    "email": "deanvanaswegen.dva@gmail.com",
+    "root": "C:/Users/aswegen.d/Dropbox/0_Buas/BuasDev/TestClearML",
+    "host": "LT22-5Z62VQ3",
+    "username": "aswegen.d",
+    "executable": "C:\\Users\\aswegen.d\\Anaconda3\\envs\\pytorch\\python.exe"
+}

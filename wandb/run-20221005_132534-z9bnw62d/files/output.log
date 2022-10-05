@@ -1,0 +1,24 @@
+
+Using cuda device
+C:\Users\aswegen.d\Anaconda3\envs\pytorch\lib\site-packages\pyglet\image\codecs\wic.py:406: UserWarning: [WinError -2147417850] Cannot change thread mode after it is set
+  warnings.warn(str(err))
+Traceback (most recent call last):
+  File "c:\Users\aswegen.d\Dropbox\0_Buas\BuasDev\TestClearML\WandBCartPoleDemo.py", line 35, in <module>
+    model.learn(
+  File "C:\Users\aswegen.d\Anaconda3\envs\pytorch\lib\site-packages\stable_baselines3\ppo\ppo.py", line 314, in learn
+    return super().learn(
+  File "C:\Users\aswegen.d\Anaconda3\envs\pytorch\lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 243, in learn
+    total_timesteps, callback = self._setup_learn(
+  File "C:\Users\aswegen.d\Anaconda3\envs\pytorch\lib\site-packages\stable_baselines3\common\base_class.py", line 451, in _setup_learn
+    self._last_obs = self.env.reset()  # pytype: disable=annotation-type-mismatch
+  File "C:\Users\aswegen.d\Anaconda3\envs\pytorch\lib\site-packages\stable_baselines3\common\vec_env\vec_video_recorder.py", line 68, in reset
+    self.start_video_recorder()
+  File "C:\Users\aswegen.d\Anaconda3\envs\pytorch\lib\site-packages\stable_baselines3\common\vec_env\vec_video_recorder.py", line 80, in start_video_recorder
+    self.video_recorder.capture_frame()
+  File "C:\Users\aswegen.d\Anaconda3\envs\pytorch\lib\site-packages\gym\wrappers\monitoring\video_recorder.py", line 151, in capture_frame
+    self._encode_image_frame(frame)
+  File "C:\Users\aswegen.d\Anaconda3\envs\pytorch\lib\site-packages\gym\wrappers\monitoring\video_recorder.py", line 208, in _encode_image_frame
+    self.encoder = ImageEncoder(
+  File "C:\Users\aswegen.d\Anaconda3\envs\pytorch\lib\site-packages\gym\wrappers\monitoring\video_recorder.py", line 336, in __init__
+    raise error.DependencyNotInstalled(
+gym.error.DependencyNotInstalled: Found neither the ffmpeg nor avconv executables. On OS X, you can install ffmpeg via `brew install ffmpeg`. On most Ubuntu variants, `sudo apt-get install ffmpeg` should do it. On Ubuntu 14.04, however, you'll need to install avconv with `sudo apt-get install libav-tools`. Alternatively, please install imageio-ffmpeg with `pip install imageio-ffmpeg`
