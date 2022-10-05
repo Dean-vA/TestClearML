@@ -41,7 +41,7 @@ model.learn(
     callback=WandbCallback(
         gradient_save_freq=100,
         #model_save_path=f"models/{run.id}",
-        model_save_path="models/test"}",
+        model_save_path="models/test",
         verbose=2,
     ),
 )
