@@ -40,9 +40,8 @@ env = DummyVecEnv([make_env]) # Only one environment
 #env = VecVideoRecorder(env, f"videos/{run.id}", record_video_trigger=lambda x: x % 2000 == 0, video_length=200)
 #%%
 
-model = PPO(config["policy_type"], env, verbose=1)#, tensorboard_log=f"runs/{run.id}")
+model = PPO(config["policy_type"], env, verbose=1, device=device)#, tensorboard_log=f"runs/{run.id}")
 model.learn(
-    device=device,
     total_timesteps=config["total_timesteps"],
     #callback=WandbCallback(
         #gradient_save_freq=100,
