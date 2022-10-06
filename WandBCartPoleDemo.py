@@ -10,9 +10,9 @@ from wandb.integration.sb3 import WandbCallback
 import torch
 
 #from clearml import Task
-#task = Task.init(project_name='Test', task_name='CartPole1')
-#task.set_base_docker('nvidia-cuda-11.7.0-base-ubuntu20.04-x86_64-sha256-e585d433c8cac09b487dfe9807364d9035be4a1ec4b59b550b31622bcb798ad3.tgz')
-#task.execute_remotely(queue_name="CPU1")#,docker_image="11.8.0-cudnn8-runtime-ubuntu20.04")pytorch/pytorch:1.7.1-cuda11.0-cudnn8-runtime
+task = Task.init(project_name='Test', task_name='CartPole1')
+task.set_base_docker('nvidia-cuda-11.8.0-cudnn8-runtime-ubuntu20.04')
+task.execute_remotely(queue_name="3090 Queue")#,docker_image="11.8.0-cudnn8-runtime-ubuntu20.04")pytorch/pytorch:1.7.1-cuda11.0-cudnn8-runtime
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
