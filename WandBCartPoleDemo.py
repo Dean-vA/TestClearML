@@ -11,7 +11,7 @@ import torch
 
 from clearml import Task
 task = Task.init(project_name='Test', task_name='CartPole1')
-task.set_base_docker('nvidia-cuda-11.8.0-cudnn8-runtime-ubuntu20.04')
+task.set_base_docker('nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu20.04')
 task.execute_remotely(queue_name="3090 Queue")#,docker_image="11.8.0-cudnn8-runtime-ubuntu20.04")pytorch/pytorch:1.7.1-cuda11.0-cudnn8-runtime
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
