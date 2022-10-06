@@ -11,8 +11,8 @@ import torch
 
 from clearml import Task
 task = Task.init(project_name='Test', task_name='CartPole1')
-task.set_base_docker('11.8.0-cudnn8-runtime-ubuntu20.04')
-task.execute_remotely(queue_name="CPU1")
+task.set_base_docker('pytorch/pytorch:1.7.1-cuda11.0-cudnn8-runtime')
+task.execute_remotely(queue_name="CPU1")#,docker_image="11.8.0-cudnn8-runtime-ubuntu20.04")
 
 device = torch.device('cpu')
 
