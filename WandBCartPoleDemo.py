@@ -42,6 +42,7 @@ env = DummyVecEnv([make_env]) # Only one environment
 
 model = PPO(config["policy_type"], env, verbose=1)#, tensorboard_log=f"runs/{run.id}")
 model.learn(
+    device=device,
     total_timesteps=config["total_timesteps"],
     #callback=WandbCallback(
         #gradient_save_freq=100,
