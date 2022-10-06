@@ -7,10 +7,13 @@ from stable_baselines3.common.vec_env import DummyVecEnv, VecVideoRecorder
 
 import wandb
 from wandb.integration.sb3 import WandbCallback
+import torch
 
 from clearml import Task
 task = Task.init(project_name='Test', task_name='CartPole1')
 task.execute_remotely(queue_name="CPU1")
+
+device = torch.device('cpu')
 
 #%%
 config = {
